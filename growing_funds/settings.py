@@ -21,12 +21,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '4d!ktgdx7)_6ny)8lu7rj@50x)2ormpio#$12kryz3q8v9-22$'
+SECRET_KEY = os.environ.get('SECRET_KEY','4d!ktgdx7)_6ny)8lu7rj@50x)2ormpio#$12kryz3q8v9-22$')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['local', 'growing-funds-app.herokuapp.com']
+ALLOWED_HOSTS = ['local', os.environ.get('HEROKU_HOSTNAME')]
 
 
 # Application definition
@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'growing_funds.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse('postgres://inctfcpemchhxy:c0d93f0ca22df4fb937b6f81b72fe5ffef7a1097a89d86e7809a8e9539d723d5@ec2-46-137-84-140.eu-west-1.compute.amazonaws.com:5432/d4fo4lb42cj49v')
+    'default': dj_database_url.parse(OS.ENVIRON.GET('DATABASE_URL'))
 }
 
 
