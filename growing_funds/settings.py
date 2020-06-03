@@ -26,7 +26,7 @@ SECRET_KEY = '4d!ktgdx7)_6ny)8lu7rj@50x)2ormpio#$12kryz3q8v9-22$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['local', 'growing-funds-app.herokuapp.com']
 
 
 # Application definition
