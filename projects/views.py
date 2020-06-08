@@ -8,7 +8,7 @@ from datetime import datetime
 def get_projects(request):
     projects = Project.objects.filter(created_date__lte=datetime.now()).order_by('-created_date')
 
-    return render(request, 'projects/projects_lists.html', {'projects': projects})
+    return render(request, 'projects/index.html', {'projects': projects})
 
 
 def add_project(request):
