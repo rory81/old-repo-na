@@ -1,34 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-  <h1>Test 123</h1>
-  <table>
-    {% for project in projects %}
-    <tr>
-        <td>
-            {{ project.title }}
-        </td>
-        <td>
-            {{ project.goal }}
-        </td>
-        <td>
-            <a href="/edit/{{ project.id}}">
-                <button>Edit</button>
-            </a>
-        </td>
-        <td>
-            <a href="/delete/{{ project.id}}">
-                <button>Delete</button>
-            </a>
-        </td>
-    </tr>
-    {% endfor %}
-</table>
-</body>
-</html>
+{% extends "base.html" %}
+{% load static %}
+
+{% block content%}
+    <h1 class="display-4 text-success">It Works</h1>
+{% endblock %}

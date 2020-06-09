@@ -64,7 +64,10 @@ ROOT_URLCONF = 'growing_funds.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -95,7 +98,7 @@ ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_SIGNUP_EMAIL_ENTER_TWICE = True
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
-# ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = False for testing and logout purposes
+# ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = False # for testing and logout purposes
 LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'growing_funds.wsgi.application'

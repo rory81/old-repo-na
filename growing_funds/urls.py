@@ -19,10 +19,10 @@ from projects import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.get_projects, name='get_projects'),
-    path('add', views.add_project, name='add'),
-    path('edit/<project_id>', views.edit_project, name='edit'),
-    path('delete/<project_id>', views.delete_project, name='delete'),
     path('accounts/', include('allauth.urls')),
+    path('', views.index, name='home'),
+    # path('add', views.add_project, name='add'),
+    # path('edit/<project_id>', views.edit_project, name='edit'),
+    # path('delete/<project_id>', views.delete_project, name='delete'),
 
 ]
