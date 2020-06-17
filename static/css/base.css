@@ -1,9 +1,25 @@
-html{
-    height: 100%
+html {
+    height: 100%;
 }
 
-body{
-    color: red!important;
-    font-family: fantasy;
-    background-color: blue
+body {
+    height: calc(100vh - 164px);
+    color: #555;
+    font-family: 'Lato';
+}
+
+.logo_title{
+    font-variant: small-caps;
+    color:#669900;
+    letter-spacing: 1px;
+    font-size: 45px;
+    font-weight: 500;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+/* ORANGE TOPBAR */
+#topnav{
+    background-color: #ff9900
 }
